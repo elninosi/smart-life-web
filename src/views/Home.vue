@@ -53,7 +53,7 @@
           </el-avatar>
         </el-tooltip>
         <p class="device-name">{{ device.name }}</p>
-        <p class="device-status">{{ device.dev_type }}</p>
+        <p class="device-status">{{ device.type }}</p>
 
         <template v-if="device.type === 'scene'">
           <el-button type="default" circle class="icon-big trigger"
