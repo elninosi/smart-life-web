@@ -212,7 +212,7 @@ const triggerScene = async (device) => {
   margin-right: 16px;
 }
 
-.device-status {
-  margin-right: 8px;
+.device-name {
+  margin-right: 20px;
 }
 </style>
