@@ -160,7 +160,6 @@
       </div>
     </div>
 
-
     <div v-for="device in devicesSorted" :key="device.id">
       <el-card class="device" :style="device.data.online === false ? 'filter: opacity(0.65) grayscale(1);' : ''">
         <el-tooltip effect="light" :content="device.type" :offset="-20"
