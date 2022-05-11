@@ -16,6 +16,7 @@
       <el-button type="default" @click="logout()">Logout</el-button>
     </template>
   </div>
+  <!-- 
   <div id="devices">
     <div v-for="device in devicesSorted" :key="device.id">
       <el-card class="device" :style="device.data.online === false ? 'filter: opacity(0.65) grayscale(1);' : ''">
@@ -41,6 +42,34 @@
       </el-card>
     </div>
   </div>
+  -->
+  <div id="devices-details">
+    <div v-for="device in devicesSorted" :key="device.id">
+      <el-card class="device" :style="device.data.online === false ? 'filter: opacity(0.65) grayscale(1);' : ''">
+        <el-tooltip effect="light" :content="device.type" :offset="-20"
+          :visible-arrow="false">
+          <el-avatar :src="`/device_icons/${device.type}.png`" shape="square">
+            <img src="/device_icons/default.png"/>
+          </el-avatar>
+        </el-tooltip>
+        <span class="device-name">{{ device.name }}</span>
+        
+        <template v-if="device.type === 'scene'">
+          <el-button type="default" circle class="icon-big trigger"
+            @click="triggerScene(device);"
+          ><i class="el-icon-material">play_arrow</i></el-button>
+        </template>
+        <template v-else>
+          <el-button type="default" circle class="icon-big"
+            :class="device.data.state ? 'state-on' : 'state-off'"
+            :disabled="!device.data.online"
+            @click="toggleDevice(device);"
+          ><i class="el-icon-material">{{ device.data.online ? 'power_settings_new' : 'cloud_off' }}</i></el-button>
+        </template>
+      </el-card>
+    </div>
+  </div>
+
 </template>
 <script>
 export default {
