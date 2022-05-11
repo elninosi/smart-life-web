@@ -169,7 +169,7 @@
             <img src="/device_icons/default.png"/>
           </el-avatar>
         </el-tooltip>
-        <p class="device-name">{{ device.name }}</p><br>
+        <p class="device-name">{{ device.name }}</p>
         <p class="device-id">{{ device.id }}</p>
 
         <template v-if="device.type === 'scene'">
