@@ -16,7 +16,7 @@
       <el-button type="default" @click="logout()">Logout</el-button>
     </template>
   </div>
-  <!-- 
+  <!--
   <div id="devices">
     <div v-for="device in devicesSorted" :key="device.id">
       <el-card class="device" :style="device.data.online === false ? 'filter: opacity(0.65) grayscale(1);' : ''">
@@ -53,7 +53,7 @@
           </el-avatar>
         </el-tooltip>
         <span class="device-name">{{ device.name }}</span>
-        
+
         <template v-if="device.type === 'scene'">
           <el-button type="default" circle class="icon-big trigger"
             @click="triggerScene(device);"
