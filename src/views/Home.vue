@@ -211,4 +211,8 @@ const triggerScene = async (device) => {
   background: transparent;
   margin-right: 16px;
 }
+
+.device-status {
+  margin-right: 8px;
+}
 </style>
