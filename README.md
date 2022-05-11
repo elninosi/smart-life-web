@@ -1,9 +1,9 @@
 # smart-life-webapp
 
-Simple [Vercel](https://vercel.com/) webapp to control [Smart Life](https://www.ismartlife.me/) devices and scenes.
+Simple [Vercel](https://vercel.com/) webapp to control Tuya [Smart Life](https://www.ismartlife.me/) devices and scenes.
 
 ## Website
-https://smart-life.vercel.app/
+https://smart-life-web.vercel.app/
 
 * Only SmartLife accounts created with email and password are supported.
   * Accounts linked to Google does not work for some unknown reasons
